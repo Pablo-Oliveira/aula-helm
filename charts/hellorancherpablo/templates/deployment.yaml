@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "Hello-Rancher-Pablo.fullname" . }}
+  name: {{ include "hellorancherpablo.fullname" . }}
   labels:
-    {{- include "Hello-Rancher-Pablo.labels" . | nindent 4 }}
+    {{- include "hellorancherpablo.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "Hello-Rancher-Pablo.selectorLabels" . | nindent 6 }}
+      {{- include "hellorancherpablo.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "Hello-Rancher-Pablo.selectorLabels" . | nindent 8 }}
+        {{- include "hellorancherpablo.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "Hello-Rancher-Pablo.serviceAccountName" . }}
+      serviceAccountName: {{ include "hellorancherpablo.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "Hello-Rancher-Pablo.name" -}}
+{{- define "hellorancherpablo.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "Hello-Rancher-Pablo.fullname" -}}
+{{- define "hellorancherpablo.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "Hello-Rancher-Pablo.chart" -}}
+{{- define "hellorancherpablo.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "Hello-Rancher-Pablo.labels" -}}
-helm.sh/chart: {{ include "Hello-Rancher-Pablo.chart" . }}
-{{ include "Hello-Rancher-Pablo.selectorLabels" . }}
+{{- define "hellorancherpablo.labels" -}}
+helm.sh/chart: {{ include "hellorancherpablo.chart" . }}
+{{ include "hellorancherpablo.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "Hello-Rancher-Pablo.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "Hello-Rancher-Pablo.name" . }}
+{{- define "hellorancherpablo.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "hellorancherpablo.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "Hello-Rancher-Pablo.serviceAccountName" -}}
+{{- define "hellorancherpablo.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "Hello-Rancher-Pablo.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "hellorancherpablo.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

@@ -1,5 +1,5 @@
 apiVersion: v2
-name: Hello-Rancher-Pablo
+name: hellorancherpablo
 description: A Helm chart baseado no peteindockerhub/hello-rancher para cumprir exercício final do treinamento.
 
 # A chart can be either an 'application' or a 'library' chart.
