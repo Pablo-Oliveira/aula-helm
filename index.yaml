@@ -1,0 +1,71 @@
+apiVersion: v1
+entries:
+  hellorancherpablo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-31T14:12:09.0087668-04:00"
+    description: A Helm chart baseado no peteindockerhub/hello-rancher para cumprir
+      exercício final do treinamento.
+    digest: bc8cffa1aa193c427649243235355ee0bb8a5125eee969921c1c021c0ebe633f
+    name: hellorancherpablo
+    type: application
+    urls:
+    - https://github.com/Pablo-Oliveira/aula-helm.git/hellorancherpablo/hellorancherpablo-0.1.0.tgz
+    version: 0.1.0
+  primeirochartpablo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-07-31T14:12:09.0097663-04:00"
+    description: A versão 1.0 de chart heml
+    digest: 1c4998f51b7e13970de05d43d27c6c8036265a3003c028feb8f7cb58d7e9f6c9
+    icon: https://cdn.icon-icons.com/icons2/2415/PNG/512/nginx_original_logo_icon_146413.png
+    name: primeirochartpablo
+    type: application
+    urls:
+    - https://github.com/Pablo-Oliveira/aula-helm.git/primeirochartpablo/primeirochartpablo-0.1.0.tgz
+    version: 0.1.0
+  wordpress:
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 6.0.1
+    created: "2022-07-31T14:12:09.0217664-04:00"
+    dependencies:
+    - condition: memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.x.x
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: WordPress is the world's most popular blogging and content management
+      platform. Powerful yet simple, everyone from students to global corporations
+      use it to build beautiful, functional websites.
+    digest: a673bfbbff21662707f7f715eacee75f33c16d7bd32158c6e1b8efda7c60d9ba
+    home: https://github.com/bitnami/charts/tree/master/bitnami/wordpress
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    keywords:
+    - application
+    - blog
+    - cms
+    - http
+    - php
+    - web
+    - wordpress
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: wordpress
+    sources:
+    - https://github.com/bitnami/bitnami-docker-wordpress
+    - https://wordpress.org/
+    urls:
+    - https://github.com/Pablo-Oliveira/aula-helm.git/wordpress/wordpress-15.0.12.tgz
+    version: 15.0.12
+generated: "2022-07-31T14:12:09.0077665-04:00"
