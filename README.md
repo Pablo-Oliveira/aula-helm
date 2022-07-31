@@ -7,4 +7,3 @@ Para incluir via Rancher dashboard (inclusão de repositório via repositório g
 
 link do repositório helm via CLI: https://pablo-oliveira.github.io/aula-helm/
 ex: helm repo add <nome local do repositório>  https://pablo-oliveira.github.io/aula-helm/
----
