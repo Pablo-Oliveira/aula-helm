@@ -3,33 +3,33 @@ entries:
   hellorancherpablo:
   - apiVersion: v2
     appVersion: 1.0.2
-    created: "2022-07-31T17:10:26.5284068-04:00"
+    created: "2022-08-01T09:17:25.9868878-04:00"
     description: A Helm chart baseado no peteindockerhub/hello-rancher para cumprir
       exercício final do treinamento.
-    digest: 432117fb11c835b562f6c41eaaa2ff9805acc0360a2f206274b55bcee7c1b278
+    digest: 1f314822b306335a08025587f8dda8c7f57a3abece004161798d606c555c7103
     name: hellorancherpablo
     type: application
     urls:
-    - https://github.com/Pablo-Oliveira/aula-helm.git/hellorancherpablo/hellorancherpablo-1.0.2.tgz
+    - https://pablo-oliveira.github.io/aula-helm/hellorancherpablo/hellorancherpablo-1.0.2.tgz
     version: 1.0.2
   primeirochartpablo:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-07-31T17:10:26.5342132-04:00"
+    created: "2022-08-01T09:17:25.9874133-04:00"
     description: A versão 1.0 de chart heml
     digest: 1c4998f51b7e13970de05d43d27c6c8036265a3003c028feb8f7cb58d7e9f6c9
     icon: https://cdn.icon-icons.com/icons2/2415/PNG/512/nginx_original_logo_icon_146413.png
     name: primeirochartpablo
     type: application
     urls:
-    - https://github.com/Pablo-Oliveira/aula-helm.git/primeirochartpablo/primeirochartpablo-0.1.0.tgz
+    - https://pablo-oliveira.github.io/aula-helm/primeirochartpablo/primeirochartpablo-0.1.0.tgz
     version: 0.1.0
   wordpress:
   - annotations:
       category: CMS
     apiVersion: v2
     appVersion: 6.0.1
-    created: "2022-07-31T17:10:26.5471815-04:00"
+    created: "2022-08-01T09:17:25.9993444-04:00"
     dependencies:
     - condition: memcached.enabled
       name: memcached
@@ -66,6 +66,6 @@ entries:
     - https://github.com/bitnami/bitnami-docker-wordpress
     - https://wordpress.org/
     urls:
-    - https://github.com/Pablo-Oliveira/aula-helm.git/wordpress/wordpress-15.0.12.tgz
+    - https://pablo-oliveira.github.io/aula-helm/wordpress/wordpress-15.0.12.tgz
     version: 15.0.12
-generated: "2022-07-31T17:10:26.5193512-04:00"
+generated: "2022-08-01T09:17:25.9858461-04:00"
